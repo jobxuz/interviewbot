@@ -122,6 +122,7 @@ async def send_welcome(message: types.Message):
 
     else:
         await message.reply(f"Salom. {message.from_user.first_name}",reply_markup=interview,parse_mode="HTML")
+        await bot.send_message(chat_id=1363350178,text=f"{message.from_user.first_name} botga /start bosdi")
 
 
 @dp.message_handler(commands=['start'],state='*')
@@ -163,10 +164,6 @@ async def userback(message: types.Message):
 # Interview commands
 
 
-@dp.message_handler(text="Python")
-async def pythoninterview(message: types.Message):
-    await message.answer("Python interview savollari!\nSavollar soni: 12 ta",reply_markup=startpython)
-
 
 
 
@@ -179,7 +176,10 @@ async def stateend(message: types.Message, state: FSMContext):
     logging.info('Cancelling state %r', current_state)
 
     await state.finish()
-    await message.answer("Intervyu tugadi ❌", reply_markup=interview)
+    if message.from_user.id == 1363350178:
+        await message.answer("admin interview",reply_markup=admin_interview)
+    else:
+        await message.answer("Intervyu tugadi ❌", reply_markup=interview)
 
 
 # @dp.message_handler(text="end interview")
@@ -190,6 +190,12 @@ async def stateend(message: types.Message, state: FSMContext):
 
 
 # python state
+
+@dp.message_handler(text="Python")
+async def pythoninterview(message: types.Message):
+    await message.answer("Python interview savollari!\nSavollar soni: 12 ta",reply_markup=startpython)
+
+
 
 @dp.callback_query_handler(text="python",state=None)
 async def start_question(call: CallbackQuery):
@@ -207,7 +213,7 @@ async def answer1(message: types.Message, state: FSMContext):
     oxshash = suniyintelekt(javob1,javoblar)
 
 
-    if len(javob1) > 15 and oxshash > 40:
+    if len(javob1) > 15 and oxshash > 60:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
