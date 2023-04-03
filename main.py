@@ -205,7 +205,7 @@ async def answer1(message: types.Message, state: FSMContext):
     javob1 = message.text
     javoblar = interview_answer(python[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
-    print(oxshash)
+
 
     if len(javob1) > 15 and oxshash > 40:
         await state.update_data(
@@ -226,7 +226,7 @@ async def answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(python[1]['question'])
     oxshash = suniyintelekt(javob2, javoblar)
-    print(oxshash)
+
     if len(javob2) > 15 and oxshash > 40:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
@@ -244,7 +244,7 @@ async def answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(python[2]['question'])
     oxshash = suniyintelekt(javob3, javoblar)
-    print(oxshash)
+
     if len(javob3) > 15 and oxshash > 40:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
@@ -262,7 +262,7 @@ async def answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(python[3]['question'])
     oxshash = suniyintelekt(javob4, javoblar)
-    print(oxshash)
+
     if len(javob4) > 15 and oxshash > 40:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
@@ -280,7 +280,7 @@ async def answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(python[4]['question'])
     oxshash = suniyintelekt(javob5, javoblar)
-    print(oxshash)
+
     if len(javob5) > 15 and oxshash > 40:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
@@ -298,7 +298,7 @@ async def answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(python[5]['question'])
     oxshash = suniyintelekt(javob6, javoblar)
-    print(oxshash)
+
     if len(javob6) > 15 and oxshash > 40:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
@@ -316,7 +316,7 @@ async def answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(python[6]['question'])
     oxshash = suniyintelekt(javob7, javoblar)
-    print(oxshash)
+
     if len(javob7) > 15 and oxshash > 40:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
@@ -335,7 +335,7 @@ async def answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(python[7]['question'])
     oxshash = suniyintelekt(javob8, javoblar)
-    print(oxshash)
+
     if len(javob8) > 15 and oxshash > 40:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
@@ -353,7 +353,7 @@ async def answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(python[8]['question'])
     oxshash = suniyintelekt(javob9, javoblar)
-    print(oxshash)
+
     if len(javob9) > 15 and oxshash > 40:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
@@ -372,7 +372,7 @@ async def answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(python[9]['question'])
     oxshash = suniyintelekt(javob10, javoblar)
-    print(oxshash)
+
     if len(javob10) > 15 and oxshash > 40:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
@@ -390,7 +390,7 @@ async def answer11(message: types.Message, state: FSMContext):
     javob11 = message.text
     javoblar = interview_answer(python[10]['question'])
     oxshash = suniyintelekt(javob11, javoblar)
-    print(oxshash)
+
     if len(javob11) > 15 and oxshash > 40:
         await state.update_data(
             {"javob11": javob11,"oxshash11":oxshash}
@@ -410,7 +410,7 @@ async def answer12(message: types.Message, state: FSMContext):
     javob12 = message.text
     javoblar = interview_answer(python[11]['question'])
     oxshash = suniyintelekt(javob12, javoblar)
-    print(oxshash)
+
     if len(javob12) > 15 and oxshash > 40:
         await state.update_data(
             {"javob12": javob12,"oxshash12":oxshash}
@@ -514,9 +514,9 @@ async def django_answer1(message: types.Message, state: FSMContext):
     javob1 = message.text
     javoblar = interview_answer(django[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
-    print(oxshash)
 
-    if len(javob1) > 1 and oxshash > 1:
+
+    if len(javob1) > 15 and oxshash > 40:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
@@ -533,9 +533,9 @@ async def django_answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(django[1]['question'])
     oxshash = suniyintelekt(javob2,javoblar)
-    print(oxshash)
 
-    if len(javob2) > 1 and oxshash > 1:
+
+    if len(javob2) > 15 and oxshash > 40:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -553,9 +553,9 @@ async def django_answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(django[2]['question'])
     oxshash = suniyintelekt(javob3,javoblar)
-    print(oxshash)
 
-    if len(javob3) > 1 and oxshash > 1:
+
+    if len(javob3) > 15 and oxshash > 40:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -572,9 +572,9 @@ async def django_answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(django[3]['question'])
     oxshash = suniyintelekt(javob4,javoblar)
-    print(oxshash)
 
-    if len(javob4) > 1 and oxshash > 1:
+
+    if len(javob4) > 15 and oxshash > 40:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -591,9 +591,9 @@ async def django_answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(django[4]['question'])
     oxshash = suniyintelekt(javob5,javoblar)
-    print(oxshash)
 
-    if len(javob5) > 1 and oxshash > 1:
+
+    if len(javob5) > 15 and oxshash > 40:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -609,9 +609,9 @@ async def django_answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(django[5]['question'])
     oxshash = suniyintelekt(javob6,javoblar)
-    print(oxshash)
 
-    if len(javob6) > 1 and oxshash > 1:
+
+    if len(javob6) > 15 and oxshash > 40:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -627,9 +627,9 @@ async def django_answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(django[6]['question'])
     oxshash = suniyintelekt(javob7,javoblar)
-    print(oxshash)
 
-    if len(javob7) > 1 and oxshash > 1:
+
+    if len(javob7) > 15 and oxshash > 40:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -646,9 +646,9 @@ async def django_answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(django[7]['question'])
     oxshash = suniyintelekt(javob8,javoblar)
-    print(oxshash)
 
-    if len(javob8) > 1 and oxshash > 1:
+
+    if len(javob8) > 15 and oxshash > 40:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -665,9 +665,9 @@ async def django_answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(django[8]['question'])
     oxshash = suniyintelekt(javob9,javoblar)
-    print(oxshash)
 
-    if len(javob9) > 1 and oxshash > 1:
+
+    if len(javob9) > 15 and oxshash > 40:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -684,9 +684,9 @@ async def django_answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(django[9]['question'])
     oxshash = suniyintelekt(javob10,javoblar)
-    print(oxshash)
 
-    if len(javob10) > 1 and oxshash > 1:
+
+    if len(javob10) > 15 and oxshash > 40:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -704,8 +704,8 @@ async def django_answer11(message: types.Message, state: FSMContext):
     javob11 = message.text
     javoblar = interview_answer(django[10]['question'])
     oxshash = suniyintelekt(javob11, javoblar)
-    print(oxshash)
-    if len(javob11) > 1 and oxshash > 1:
+
+    if len(javob11) > 15 and oxshash > 40:
         await state.update_data(
             {"javob11": javob11,"oxshash11":oxshash}
         )
@@ -804,9 +804,9 @@ async def drf_answer1(message: types.Message, state: FSMContext):
     javob1 = message.text
     javoblar = interview_answer(drf[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
-    print(oxshash)
 
-    if len(javob1) > 1 and oxshash > 1:
+
+    if len(javob1) > 15 and oxshash > 40:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
@@ -823,9 +823,9 @@ async def drf_answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(drf[1]['question'])
     oxshash = suniyintelekt(javob2,javoblar)
-    print(oxshash)
 
-    if len(javob2) > 1 and oxshash > 1:
+
+    if len(javob2) > 15 and oxshash > 40:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -842,9 +842,9 @@ async def drf_answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(drf[2]['question'])
     oxshash = suniyintelekt(javob3,javoblar)
-    print(oxshash)
 
-    if len(javob3) > 1 and oxshash > 1:
+
+    if len(javob3) > 15 and oxshash > 40:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -861,9 +861,9 @@ async def drf_answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(drf[3]['question'])
     oxshash = suniyintelekt(javob4,javoblar)
-    print(oxshash)
 
-    if len(javob4) > 1 and oxshash > 1:
+
+    if len(javob4) > 15 and oxshash > 40:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -879,9 +879,9 @@ async def drf_answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(drf[4]['question'])
     oxshash = suniyintelekt(javob5,javoblar)
-    print(oxshash)
 
-    if len(javob5) > 1 and oxshash > 1:
+
+    if len(javob5) > 15 and oxshash > 40:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -898,9 +898,9 @@ async def drf_answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(drf[5]['question'])
     oxshash = suniyintelekt(javob6,javoblar)
-    print(oxshash)
 
-    if len(javob6) > 1 and oxshash > 1:
+
+    if len(javob6) > 15 and oxshash > 40:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -917,9 +917,9 @@ async def drf_answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(drf[6]['question'])
     oxshash = suniyintelekt(javob7,javoblar)
-    print(oxshash)
 
-    if len(javob7) > 1 and oxshash > 1:
+
+    if len(javob7) > 15 and oxshash > 40:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -936,9 +936,9 @@ async def drf_answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(drf[7]['question'])
     oxshash = suniyintelekt(javob8,javoblar)
-    print(oxshash)
 
-    if len(javob8) > 1 and oxshash > 1:
+
+    if len(javob8) > 15 and oxshash > 40:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -955,9 +955,9 @@ async def drf_answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(drf[8]['question'])
     oxshash = suniyintelekt(javob9,javoblar)
-    print(oxshash)
 
-    if len(javob9) > 1 and oxshash > 1:
+
+    if len(javob9) > 15 and oxshash > 40:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -974,8 +974,8 @@ async def drf_answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(django[9]['question'])
     oxshash = suniyintelekt(javob10, javoblar)
-    print(oxshash)
-    if len(javob10) > 1 and oxshash > 1:
+
+    if len(javob10) > 15 and oxshash > 40:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -1070,9 +1070,9 @@ async def job_answer1(message: types.Message, state: FSMContext):
     javob1 = message.text
     javoblar = interview_answer(jobinterview[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
-    print(oxshash)
 
-    if len(javob1) > 1 and oxshash > 1:
+
+    if len(javob1) > 15 and oxshash > 40:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
@@ -1089,9 +1089,9 @@ async def job_answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(jobinterview[1]['question'])
     oxshash = suniyintelekt(javob2,javoblar)
-    print(oxshash)
 
-    if len(javob2) > 1 and oxshash > 1:
+
+    if len(javob2) > 15 and oxshash > 40:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -1109,9 +1109,9 @@ async def job_answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(jobinterview[2]['question'])
     oxshash = suniyintelekt(javob3,javoblar)
-    print(oxshash)
 
-    if len(javob3) > 1 and oxshash > 1:
+
+    if len(javob3) > 15 and oxshash > 40:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -1128,9 +1128,9 @@ async def job_answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(jobinterview[3]['question'])
     oxshash = suniyintelekt(javob4,javoblar)
-    print(oxshash)
 
-    if len(javob4) > 1 and oxshash > 1:
+
+    if len(javob4) > 15 and oxshash > 40:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -1148,9 +1148,9 @@ async def job_answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(jobinterview[4]['question'])
     oxshash = suniyintelekt(javob5,javoblar)
-    print(oxshash)
 
-    if len(javob5) > 1 and oxshash > 1:
+
+    if len(javob5) > 15 and oxshash > 40:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -1167,9 +1167,9 @@ async def job_answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(jobinterview[5]['question'])
     oxshash = suniyintelekt(javob6,javoblar)
-    print(oxshash)
 
-    if len(javob6) > 1 and oxshash > 1:
+
+    if len(javob6) > 15 and oxshash > 40:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -1189,9 +1189,9 @@ async def job_answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(jobinterview[6]['question'])
     oxshash = suniyintelekt(javob7,javoblar)
-    print(oxshash)
 
-    if len(javob7) > 1 and oxshash > 1:
+
+    if len(javob7) > 15 and oxshash > 40:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -1209,9 +1209,9 @@ async def job_answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(jobinterview[7]['question'])
     oxshash = suniyintelekt(javob8,javoblar)
-    print(oxshash)
 
-    if len(javob8) > 1 and oxshash > 1:
+
+    if len(javob8) > 15 and oxshash > 40:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -1229,9 +1229,9 @@ async def job_answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(jobinterview[8]['question'])
     oxshash = suniyintelekt(javob9,javoblar)
-    print(oxshash)
 
-    if len(javob9) > 1 and oxshash > 1:
+
+    if len(javob9) > 15 and oxshash > 40:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -1249,9 +1249,9 @@ async def job_answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(jobinterview[9]['question'])
     oxshash = suniyintelekt(javob10,javoblar)
-    print(oxshash)
 
-    if len(javob10) > 1 and oxshash > 1:
+
+    if len(javob10) > 15 and oxshash > 40:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -1268,9 +1268,8 @@ async def job_answer11(message: types.Message, state: FSMContext):
     javob11 = message.text
     javoblar = interview_answer(jobinterview[10]['question'])
     oxshash = suniyintelekt(javob11,javoblar)
-    print(oxshash)
 
-    if len(javob11) > 1 and oxshash > 1:
+    if len(javob11) > 15 and oxshash > 40:
         await state.update_data(
             {"javob11": javob11,"oxshash11":oxshash}
         )
@@ -1287,9 +1286,9 @@ async def job_answer12(message: types.Message, state: FSMContext):
     javob12 = message.text
     javoblar = interview_answer(jobinterview[11]['question'])
     oxshash = suniyintelekt(javob12,javoblar)
-    print(oxshash)
 
-    if len(javob12) > 1 and oxshash > 1:
+
+    if len(javob12) > 15 and oxshash > 40:
         await state.update_data(
             {"javob12": javob12,"oxshash12":oxshash}
         )
@@ -1306,9 +1305,9 @@ async def job_answer13(message: types.Message, state: FSMContext):
     javob13 = message.text
     javoblar = interview_answer(jobinterview[12]['question'])
     oxshash = suniyintelekt(javob13,javoblar)
-    print(oxshash)
 
-    if len(javob13) > 1 and oxshash > 1:
+
+    if len(javob13) > 15 and oxshash > 40:
         await state.update_data(
             {"javob13": javob13,"oxshash13":oxshash}
         )
@@ -1325,9 +1324,9 @@ async def job_answer14(message: types.Message, state: FSMContext):
     javob14 = message.text
     javoblar = interview_answer(jobinterview[13]['question'])
     oxshash = suniyintelekt(javob14, javoblar)
-    print(oxshash)
 
-    if len(javob14) > 1 and oxshash > 1:
+
+    if len(javob14) > 15 and oxshash > 40:
         await state.update_data(
             {"javob14": javob14, "oxshash14": oxshash}
         )
@@ -1345,9 +1344,9 @@ async def job_answer15(message: types.Message, state: FSMContext):
     javob15 = message.text
     javoblar = interview_answer(jobinterview[14]['question'])
     oxshash = suniyintelekt(javob15, javoblar)
-    print(oxshash)
 
-    if len(javob15) > 1 and oxshash > 1:
+
+    if len(javob15) > 15 and oxshash > 40:
         await state.update_data(
             {"javob15": javob15, "oxshash15": oxshash}
         )
@@ -1364,9 +1363,9 @@ async def job_answer16(message: types.Message, state: FSMContext):
     javob16 = message.text
     javoblar = interview_answer(jobinterview[15]['question'])
     oxshash = suniyintelekt(javob16, javoblar)
-    print(oxshash)
 
-    if len(javob16) > 1 and oxshash > 1:
+
+    if len(javob16) > 15 and oxshash > 40:
         await state.update_data(
             {"javob16": javob16, "oxshash16": oxshash}
         )
@@ -1383,9 +1382,9 @@ async def job_answer17(message: types.Message, state: FSMContext):
     javob17 = message.text
     javoblar = interview_answer(jobinterview[16]['question'])
     oxshash = suniyintelekt(javob17, javoblar)
-    print(oxshash)
 
-    if len(javob17) > 1 and oxshash > 1:
+
+    if len(javob17) > 15 and oxshash > 40:
         await state.update_data(
             {"javob17": javob17, "oxshash17": oxshash}
         )
@@ -1404,8 +1403,8 @@ async def job_answer18(message: types.Message, state: FSMContext):
     javob18 = message.text
     javoblar = interview_answer(jobinterview[17]['question'])
     oxshash = suniyintelekt(javob18, javoblar)
-    print(oxshash)
-    if len(javob18) > 1 and oxshash > 1:
+
+    if len(javob18) > 15 and oxshash > 40:
         await state.update_data(
             {"javob18": javob18,"oxshash18":oxshash}
         )
