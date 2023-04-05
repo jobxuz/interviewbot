@@ -24,6 +24,10 @@ interview = ReplyKeyboardMarkup(
             KeyboardButton(text="Job interview"),
 
         ],
+[
+            KeyboardButton(text="🗯️ Fikr bildirish"),
+
+        ],
     ],
 
     resize_keyboard=True
@@ -34,6 +38,17 @@ endstate = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="end interview"),
+
+        ],
+
+    ],
+    resize_keyboard=True
+)
+
+bekorqilish = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text="🚫 Bekor qilish"),
 
         ],
 
