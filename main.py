@@ -174,7 +174,7 @@ async def fikrqoldirish(message: types.Message):
 
 @dp.message_handler(state=Fikr.habar)
 async def answer1(message: types.Message, state: FSMContext):
-    msg = f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    msg = f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
     msg += f"Habar: -> {message.text}"
     await bot.send_message(chat_id=1363350178,text=msg)
     await state.finish()
@@ -249,7 +249,7 @@ async def answer1(message: types.Message, state: FSMContext):
     javoblar = interview_answer(python[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
 
-    await bot.send_message(chat_id=1363350178,text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178,text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                    f"{python[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
@@ -272,7 +272,7 @@ async def answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(python[1]['question'])
     oxshash = suniyintelekt(javob2, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[1]['question']} ?--{oxshash}\n\n{javob2}")
 
     if len(javob2) > 15 and oxshash > 40:
@@ -292,7 +292,7 @@ async def answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(python[2]['question'])
     oxshash = suniyintelekt(javob3, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[2]['question']} ?--{oxshash}\n\n{javob3}")
 
     if len(javob3) > 15 and oxshash > 40:
@@ -312,7 +312,7 @@ async def answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(python[3]['question'])
     oxshash = suniyintelekt(javob4, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[3]['question']} ?--{oxshash}\n\n{javob4}")
 
     if len(javob4) > 15 and oxshash > 40:
@@ -332,7 +332,7 @@ async def answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(python[4]['question'])
     oxshash = suniyintelekt(javob5, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[4]['question']} ?--{oxshash}\n\n{javob5}")
 
     if len(javob5) > 15 and oxshash > 40:
@@ -352,7 +352,7 @@ async def answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(python[5]['question'])
     oxshash = suniyintelekt(javob6, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[5]['question']} ?--{oxshash}\n\n{javob6}")
 
     if len(javob6) > 15 and oxshash > 40:
@@ -372,7 +372,7 @@ async def answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(python[6]['question'])
     oxshash = suniyintelekt(javob7, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[6]['question']} ?--{oxshash}\n\n{javob7}")
 
     if len(javob7) > 15 and oxshash > 40:
@@ -393,7 +393,7 @@ async def answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(python[7]['question'])
     oxshash = suniyintelekt(javob8, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[7]['question']} ?--{oxshash}\n\n{javob8}")
 
     if len(javob8) > 15 and oxshash > 40:
@@ -413,7 +413,7 @@ async def answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(python[8]['question'])
     oxshash = suniyintelekt(javob9, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[8]['question']} ?--{oxshash}\n\n{javob9}")
 
     if len(javob9) > 15 and oxshash > 40:
@@ -434,7 +434,7 @@ async def answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(python[9]['question'])
     oxshash = suniyintelekt(javob10, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[9]['question']} ?--{oxshash}\n\n{javob10}")
 
     if len(javob10) > 15 and oxshash > 40:
@@ -454,7 +454,7 @@ async def answer11(message: types.Message, state: FSMContext):
     javob11 = message.text
     javoblar = interview_answer(python[10]['question'])
     oxshash = suniyintelekt(javob11, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[10]['question']} ?--{oxshash}\n\n{javob11}")
 
     if len(javob11) > 15 and oxshash > 40:
@@ -476,7 +476,7 @@ async def answer12(message: types.Message, state: FSMContext):
     javob12 = message.text
     javoblar = interview_answer(python[11]['question'])
     oxshash = suniyintelekt(javob12, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[11]['question']} ?--{oxshash}\n\n{javob12}")
 
     if len(javob12) > 15 and oxshash > 40:
@@ -582,7 +582,7 @@ async def django_answer1(message: types.Message, state: FSMContext):
     javob1 = message.text
     javoblar = interview_answer(django[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
@@ -603,7 +603,7 @@ async def django_answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(django[1]['question'])
     oxshash = suniyintelekt(javob2,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[1]['question']} ?--{oxshash}\n\n{javob2}")
 
 
@@ -625,7 +625,7 @@ async def django_answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(django[2]['question'])
     oxshash = suniyintelekt(javob3,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[2]['question']} ?--{oxshash}\n\n{javob3}")
 
 
@@ -646,7 +646,7 @@ async def django_answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(django[3]['question'])
     oxshash = suniyintelekt(javob4,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[3]['question']} ?--{oxshash}\n\n{javob4}")
 
 
@@ -667,7 +667,7 @@ async def django_answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(django[4]['question'])
     oxshash = suniyintelekt(javob5,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[4]['question']} ?--{oxshash}\n\n{javob5}")
 
 
@@ -687,7 +687,7 @@ async def django_answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(django[5]['question'])
     oxshash = suniyintelekt(javob6,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[5]['question']} ?--{oxshash}\n\n{javob6}")
 
 
@@ -707,7 +707,7 @@ async def django_answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(django[6]['question'])
     oxshash = suniyintelekt(javob7,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[6]['question']} ?--{oxshash}\n\n{javob7}")
 
 
@@ -728,7 +728,7 @@ async def django_answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(django[7]['question'])
     oxshash = suniyintelekt(javob8,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[7]['question']} ?--{oxshash}\n\n{javob8}")
 
 
@@ -749,7 +749,7 @@ async def django_answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(django[8]['question'])
     oxshash = suniyintelekt(javob9,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[8]['question']} ?--{oxshash}\n\n{javob9}")
 
 
@@ -770,7 +770,7 @@ async def django_answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(django[9]['question'])
     oxshash = suniyintelekt(javob10,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[9]['question']} ?--{oxshash}\n\n{javob10}")
 
 
@@ -792,7 +792,7 @@ async def django_answer11(message: types.Message, state: FSMContext):
     javob11 = message.text
     javoblar = interview_answer(django[10]['question'])
     oxshash = suniyintelekt(javob11, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[10]['question']} ?--{oxshash}\n\n{javob11}")
 
     if len(javob11) > 15 and oxshash > 40:
@@ -894,7 +894,7 @@ async def drf_answer1(message: types.Message, state: FSMContext):
     javob1 = message.text
     javoblar = interview_answer(drf[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
@@ -915,7 +915,7 @@ async def drf_answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(drf[1]['question'])
     oxshash = suniyintelekt(javob2,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[1]['question']} ?--{oxshash}\n\n{javob2}")
 
 
@@ -936,7 +936,7 @@ async def drf_answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(drf[2]['question'])
     oxshash = suniyintelekt(javob3,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[2]['question']} ?--{oxshash}\n\n{javob3}")
 
 
@@ -957,7 +957,7 @@ async def drf_answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(drf[3]['question'])
     oxshash = suniyintelekt(javob4,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[3]['question']} ?--{oxshash}\n\n{javob4}")
 
 
@@ -977,7 +977,7 @@ async def drf_answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(drf[4]['question'])
     oxshash = suniyintelekt(javob5,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[4]['question']} ?--{oxshash}\n\n{javob5}")
 
 
@@ -998,7 +998,7 @@ async def drf_answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(drf[5]['question'])
     oxshash = suniyintelekt(javob6,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[5]['question']} ?--{oxshash}\n\n{javob6}")
 
 
@@ -1019,7 +1019,7 @@ async def drf_answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(drf[6]['question'])
     oxshash = suniyintelekt(javob7,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[6]['question']} ?--{oxshash}\n\n{javob7}")
 
 
@@ -1040,7 +1040,7 @@ async def drf_answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(drf[7]['question'])
     oxshash = suniyintelekt(javob8,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[7]['question']} ?--{oxshash}\n\n{javob8}")
 
 
@@ -1061,7 +1061,7 @@ async def drf_answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(drf[8]['question'])
     oxshash = suniyintelekt(javob9,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[8]['question']} ?--{oxshash}\n\n{javob9}")
 
 
@@ -1082,7 +1082,7 @@ async def drf_answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(django[9]['question'])
     oxshash = suniyintelekt(javob10, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[9]['question']} ?--{oxshash}\n\n{javob10}")
 
     if len(javob10) > 15 and oxshash > 40:
@@ -1180,7 +1180,7 @@ async def job_answer1(message: types.Message, state: FSMContext):
     javob1 = message.text
     javoblar = interview_answer(jobinterview[0]['question'])
     oxshash = suniyintelekt(javob1,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
@@ -1201,7 +1201,7 @@ async def job_answer2(message: types.Message, state: FSMContext):
     javob2 = message.text
     javoblar = interview_answer(jobinterview[1]['question'])
     oxshash = suniyintelekt(javob2,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[1]['question']} ?--{oxshash}\n\n{javob2}")
 
 
@@ -1223,7 +1223,7 @@ async def job_answer3(message: types.Message, state: FSMContext):
     javob3 = message.text
     javoblar = interview_answer(jobinterview[2]['question'])
     oxshash = suniyintelekt(javob3,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[2]['question']} ?--{oxshash}\n\n{javob3}")
 
 
@@ -1244,7 +1244,7 @@ async def job_answer4(message: types.Message, state: FSMContext):
     javob4 = message.text
     javoblar = interview_answer(jobinterview[3]['question'])
     oxshash = suniyintelekt(javob4,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[3]['question']} ?--{oxshash}\n\n{javob4}")
 
 
@@ -1266,7 +1266,7 @@ async def job_answer5(message: types.Message, state: FSMContext):
     javob5 = message.text
     javoblar = interview_answer(jobinterview[4]['question'])
     oxshash = suniyintelekt(javob5,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[4]['question']} ?--{oxshash}\n\n{javob5}")
 
 
@@ -1287,7 +1287,7 @@ async def job_answer6(message: types.Message, state: FSMContext):
     javob6 = message.text
     javoblar = interview_answer(jobinterview[5]['question'])
     oxshash = suniyintelekt(javob6,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[5]['question']} ?--{oxshash}\n\n{javob6}")
 
 
@@ -1311,7 +1311,7 @@ async def job_answer7(message: types.Message, state: FSMContext):
     javob7 = message.text
     javoblar = interview_answer(jobinterview[6]['question'])
     oxshash = suniyintelekt(javob7,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[6]['question']} ?--{oxshash}\n\n{javob7}")
 
 
@@ -1333,7 +1333,7 @@ async def job_answer8(message: types.Message, state: FSMContext):
     javob8 = message.text
     javoblar = interview_answer(jobinterview[7]['question'])
     oxshash = suniyintelekt(javob8,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[7]['question']} ?--{oxshash}\n\n{javob8}")
 
 
@@ -1355,7 +1355,7 @@ async def job_answer9(message: types.Message, state: FSMContext):
     javob9 = message.text
     javoblar = interview_answer(jobinterview[8]['question'])
     oxshash = suniyintelekt(javob9,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[8]['question']} ?--{oxshash}\n\n{javob9}")
 
 
@@ -1377,7 +1377,7 @@ async def job_answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
     javoblar = interview_answer(jobinterview[9]['question'])
     oxshash = suniyintelekt(javob10,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[9]['question']} ?--{oxshash}\n\n{javob10}")
 
 
@@ -1398,7 +1398,7 @@ async def job_answer11(message: types.Message, state: FSMContext):
     javob11 = message.text
     javoblar = interview_answer(jobinterview[10]['question'])
     oxshash = suniyintelekt(javob11,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[10]['question']} ?--{oxshash}\n\n{javob11}")
 
     if len(javob11) > 15 and oxshash > 40:
@@ -1418,7 +1418,7 @@ async def job_answer12(message: types.Message, state: FSMContext):
     javob12 = message.text
     javoblar = interview_answer(jobinterview[11]['question'])
     oxshash = suniyintelekt(javob12,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[11]['question']} ?--{oxshash}\n\n{javob12}")
 
 
@@ -1439,7 +1439,7 @@ async def job_answer13(message: types.Message, state: FSMContext):
     javob13 = message.text
     javoblar = interview_answer(jobinterview[12]['question'])
     oxshash = suniyintelekt(javob13,javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[12]['question']} ?--{oxshash}\n\n{javob13}")
 
 
@@ -1460,7 +1460,7 @@ async def job_answer14(message: types.Message, state: FSMContext):
     javob14 = message.text
     javoblar = interview_answer(jobinterview[13]['question'])
     oxshash = suniyintelekt(javob14, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[13]['question']} ?--{oxshash}\n\n{javob14}")
 
 
@@ -1482,7 +1482,7 @@ async def job_answer15(message: types.Message, state: FSMContext):
     javob15 = message.text
     javoblar = interview_answer(jobinterview[14]['question'])
     oxshash = suniyintelekt(javob15, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[14]['question']} ?--{oxshash}\n\n{javob15}")
 
 
@@ -1503,7 +1503,7 @@ async def job_answer16(message: types.Message, state: FSMContext):
     javob16 = message.text
     javoblar = interview_answer(jobinterview[15]['question'])
     oxshash = suniyintelekt(javob16, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[15]['question']} ?--{oxshash}\n\n{javob16}")
 
 
@@ -1524,7 +1524,7 @@ async def job_answer17(message: types.Message, state: FSMContext):
     javob17 = message.text
     javoblar = interview_answer(jobinterview[16]['question'])
     oxshash = suniyintelekt(javob17, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[16]['question']} ?--{oxshash}\n\n{javob17}")
 
 
@@ -1547,7 +1547,7 @@ async def job_answer18(message: types.Message, state: FSMContext):
     javob18 = message.text
     javoblar = interview_answer(jobinterview[17]['question'])
     oxshash = suniyintelekt(javob18, javoblar)
-    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--{message.from_user.username}\n\n"
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[17]['question']} ?--{oxshash}\n\n{javob18}")
 
     if len(javob18) > 15 and oxshash > 40:
