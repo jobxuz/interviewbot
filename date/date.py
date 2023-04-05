@@ -46,7 +46,7 @@ def interview_category_name(name):
     respons = requests.get(url)
     return respons.json()
 
-#print(interview_category_name('jobinterview'))
+#print(interview_category_name('django'))
 #print(len(interview_category_name('jobinterview')))
 
 

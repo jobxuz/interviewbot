@@ -275,7 +275,7 @@ async def answer2(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[1]['question']} ?--{oxshash}\n\n{javob2}")
 
-    if len(javob2) > 15 and oxshash > 40:
+    if len(javob2) > 15 and oxshash > 30:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -295,7 +295,7 @@ async def answer3(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[2]['question']} ?--{oxshash}\n\n{javob3}")
 
-    if len(javob3) > 15 and oxshash > 40:
+    if len(javob3) > 15 and oxshash > 30:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -315,7 +315,7 @@ async def answer4(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[3]['question']} ?--{oxshash}\n\n{javob4}")
 
-    if len(javob4) > 15 and oxshash > 40:
+    if len(javob4) > 15 and oxshash > 30:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -335,7 +335,7 @@ async def answer5(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[4]['question']} ?--{oxshash}\n\n{javob5}")
 
-    if len(javob5) > 15 and oxshash > 40:
+    if len(javob5) > 15 and oxshash > 30:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -355,7 +355,7 @@ async def answer6(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[5]['question']} ?--{oxshash}\n\n{javob6}")
 
-    if len(javob6) > 15 and oxshash > 40:
+    if len(javob6) > 15 and oxshash > 30:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -375,7 +375,7 @@ async def answer7(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[6]['question']} ?--{oxshash}\n\n{javob7}")
 
-    if len(javob7) > 15 and oxshash > 40:
+    if len(javob7) > 15 and oxshash > 30:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -396,7 +396,7 @@ async def answer8(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[7]['question']} ?--{oxshash}\n\n{javob8}")
 
-    if len(javob8) > 15 and oxshash > 40:
+    if len(javob8) > 15 and oxshash > 30:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -416,7 +416,7 @@ async def answer9(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[8]['question']} ?--{oxshash}\n\n{javob9}")
 
-    if len(javob9) > 15 and oxshash > 40:
+    if len(javob9) > 15 and oxshash > 30:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -437,7 +437,7 @@ async def answer10(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[9]['question']} ?--{oxshash}\n\n{javob10}")
 
-    if len(javob10) > 15 and oxshash > 40:
+    if len(javob10) > 15 and oxshash > 30:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -457,7 +457,7 @@ async def answer11(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[10]['question']} ?--{oxshash}\n\n{javob11}")
 
-    if len(javob11) > 15 and oxshash > 40:
+    if len(javob11) > 15 and oxshash > 30:
         await state.update_data(
             {"javob11": javob11,"oxshash11":oxshash}
         )
@@ -479,7 +479,7 @@ async def answer12(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[11]['question']} ?--{oxshash}\n\n{javob12}")
 
-    if len(javob12) > 15 and oxshash > 40:
+    if len(javob12) > 15 and oxshash > 30:
         await state.update_data(
             {"javob12": javob12,"oxshash12":oxshash}
         )
@@ -586,7 +586,7 @@ async def django_answer1(message: types.Message, state: FSMContext):
                                                     f"{django[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
-    if len(javob1) > 15 and oxshash > 40:
+    if len(javob1) > 15 and oxshash > 30:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
@@ -607,7 +607,7 @@ async def django_answer2(message: types.Message, state: FSMContext):
                                                     f"{django[1]['question']} ?--{oxshash}\n\n{javob2}")
 
 
-    if len(javob2) > 15 and oxshash > 40:
+    if len(javob2) > 15 and oxshash > 30:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -629,7 +629,7 @@ async def django_answer3(message: types.Message, state: FSMContext):
                                                     f"{django[2]['question']} ?--{oxshash}\n\n{javob3}")
 
 
-    if len(javob3) > 15 and oxshash > 40:
+    if len(javob3) > 15 and oxshash > 30:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -650,7 +650,7 @@ async def django_answer4(message: types.Message, state: FSMContext):
                                                     f"{django[3]['question']} ?--{oxshash}\n\n{javob4}")
 
 
-    if len(javob4) > 15 and oxshash > 40:
+    if len(javob4) > 15 and oxshash > 30:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -671,7 +671,7 @@ async def django_answer5(message: types.Message, state: FSMContext):
                                                     f"{django[4]['question']} ?--{oxshash}\n\n{javob5}")
 
 
-    if len(javob5) > 15 and oxshash > 40:
+    if len(javob5) > 15 and oxshash > 30:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -691,7 +691,7 @@ async def django_answer6(message: types.Message, state: FSMContext):
                                                     f"{django[5]['question']} ?--{oxshash}\n\n{javob6}")
 
 
-    if len(javob6) > 15 and oxshash > 40:
+    if len(javob6) > 15 and oxshash > 30:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -711,7 +711,7 @@ async def django_answer7(message: types.Message, state: FSMContext):
                                                     f"{django[6]['question']} ?--{oxshash}\n\n{javob7}")
 
 
-    if len(javob7) > 15 and oxshash > 40:
+    if len(javob7) > 15 and oxshash > 30:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -732,7 +732,7 @@ async def django_answer8(message: types.Message, state: FSMContext):
                                                     f"{django[7]['question']} ?--{oxshash}\n\n{javob8}")
 
 
-    if len(javob8) > 15 and oxshash > 40:
+    if len(javob8) > 15 and oxshash > 30:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -753,7 +753,7 @@ async def django_answer9(message: types.Message, state: FSMContext):
                                                     f"{django[8]['question']} ?--{oxshash}\n\n{javob9}")
 
 
-    if len(javob9) > 15 and oxshash > 40:
+    if len(javob9) > 15 and oxshash > 30:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -774,7 +774,7 @@ async def django_answer10(message: types.Message, state: FSMContext):
                                                     f"{django[9]['question']} ?--{oxshash}\n\n{javob10}")
 
 
-    if len(javob10) > 15 and oxshash > 40:
+    if len(javob10) > 15 and oxshash > 30:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -795,7 +795,7 @@ async def django_answer11(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{django[10]['question']} ?--{oxshash}\n\n{javob11}")
 
-    if len(javob11) > 15 and oxshash > 40:
+    if len(javob11) > 15 and oxshash > 30:
         await state.update_data(
             {"javob11": javob11,"oxshash11":oxshash}
         )
@@ -898,7 +898,7 @@ async def drf_answer1(message: types.Message, state: FSMContext):
                                                     f"{drf[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
-    if len(javob1) > 15 and oxshash > 40:
+    if len(javob1) > 15 and oxshash > 30:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
@@ -919,7 +919,7 @@ async def drf_answer2(message: types.Message, state: FSMContext):
                                                     f"{drf[1]['question']} ?--{oxshash}\n\n{javob2}")
 
 
-    if len(javob2) > 15 and oxshash > 40:
+    if len(javob2) > 15 and oxshash > 30:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -940,7 +940,7 @@ async def drf_answer3(message: types.Message, state: FSMContext):
                                                     f"{drf[2]['question']} ?--{oxshash}\n\n{javob3}")
 
 
-    if len(javob3) > 15 and oxshash > 40:
+    if len(javob3) > 15 and oxshash > 30:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -961,7 +961,7 @@ async def drf_answer4(message: types.Message, state: FSMContext):
                                                     f"{drf[3]['question']} ?--{oxshash}\n\n{javob4}")
 
 
-    if len(javob4) > 15 and oxshash > 40:
+    if len(javob4) > 15 and oxshash > 30:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -981,7 +981,7 @@ async def drf_answer5(message: types.Message, state: FSMContext):
                                                     f"{drf[4]['question']} ?--{oxshash}\n\n{javob5}")
 
 
-    if len(javob5) > 15 and oxshash > 40:
+    if len(javob5) > 15 and oxshash > 30:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -1002,7 +1002,7 @@ async def drf_answer6(message: types.Message, state: FSMContext):
                                                     f"{drf[5]['question']} ?--{oxshash}\n\n{javob6}")
 
 
-    if len(javob6) > 15 and oxshash > 40:
+    if len(javob6) > 15 and oxshash > 30:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -1023,7 +1023,7 @@ async def drf_answer7(message: types.Message, state: FSMContext):
                                                     f"{drf[6]['question']} ?--{oxshash}\n\n{javob7}")
 
 
-    if len(javob7) > 15 and oxshash > 40:
+    if len(javob7) > 15 and oxshash > 30:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -1044,7 +1044,7 @@ async def drf_answer8(message: types.Message, state: FSMContext):
                                                     f"{drf[7]['question']} ?--{oxshash}\n\n{javob8}")
 
 
-    if len(javob8) > 15 and oxshash > 40:
+    if len(javob8) > 15 and oxshash > 30:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -1065,7 +1065,7 @@ async def drf_answer9(message: types.Message, state: FSMContext):
                                                     f"{drf[8]['question']} ?--{oxshash}\n\n{javob9}")
 
 
-    if len(javob9) > 15 and oxshash > 40:
+    if len(javob9) > 15 and oxshash > 30:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -1085,7 +1085,7 @@ async def drf_answer10(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[9]['question']} ?--{oxshash}\n\n{javob10}")
 
-    if len(javob10) > 15 and oxshash > 40:
+    if len(javob10) > 15 and oxshash > 30:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -1184,7 +1184,7 @@ async def job_answer1(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
-    if len(javob1) > 15 and oxshash > 40:
+    if len(javob1) > 15 and oxshash > 30:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
@@ -1205,7 +1205,7 @@ async def job_answer2(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[1]['question']} ?--{oxshash}\n\n{javob2}")
 
 
-    if len(javob2) > 15 and oxshash > 40:
+    if len(javob2) > 15 and oxshash > 30:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -1227,7 +1227,7 @@ async def job_answer3(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[2]['question']} ?--{oxshash}\n\n{javob3}")
 
 
-    if len(javob3) > 15 and oxshash > 40:
+    if len(javob3) > 15 and oxshash > 30:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -1248,7 +1248,7 @@ async def job_answer4(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[3]['question']} ?--{oxshash}\n\n{javob4}")
 
 
-    if len(javob4) > 15 and oxshash > 40:
+    if len(javob4) > 15 and oxshash > 30:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -1270,7 +1270,7 @@ async def job_answer5(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[4]['question']} ?--{oxshash}\n\n{javob5}")
 
 
-    if len(javob5) > 15 and oxshash > 40:
+    if len(javob5) > 15 and oxshash > 30:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -1291,7 +1291,7 @@ async def job_answer6(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[5]['question']} ?--{oxshash}\n\n{javob6}")
 
 
-    if len(javob6) > 15 and oxshash > 40:
+    if len(javob6) > 15 and oxshash > 30:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -1315,7 +1315,7 @@ async def job_answer7(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[6]['question']} ?--{oxshash}\n\n{javob7}")
 
 
-    if len(javob7) > 15 and oxshash > 40:
+    if len(javob7) > 15 and oxshash > 30:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -1337,7 +1337,7 @@ async def job_answer8(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[7]['question']} ?--{oxshash}\n\n{javob8}")
 
 
-    if len(javob8) > 15 and oxshash > 40:
+    if len(javob8) > 15 and oxshash > 30:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -1359,7 +1359,7 @@ async def job_answer9(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[8]['question']} ?--{oxshash}\n\n{javob9}")
 
 
-    if len(javob9) > 15 and oxshash > 40:
+    if len(javob9) > 15 and oxshash > 30:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -1381,7 +1381,7 @@ async def job_answer10(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[9]['question']} ?--{oxshash}\n\n{javob10}")
 
 
-    if len(javob10) > 15 and oxshash > 40:
+    if len(javob10) > 15 and oxshash > 30:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -1401,7 +1401,7 @@ async def job_answer11(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[10]['question']} ?--{oxshash}\n\n{javob11}")
 
-    if len(javob11) > 15 and oxshash > 40:
+    if len(javob11) > 15 and oxshash > 30:
         await state.update_data(
             {"javob11": javob11,"oxshash11":oxshash}
         )
@@ -1422,7 +1422,7 @@ async def job_answer12(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[11]['question']} ?--{oxshash}\n\n{javob12}")
 
 
-    if len(javob12) > 15 and oxshash > 40:
+    if len(javob12) > 15 and oxshash > 30:
         await state.update_data(
             {"javob12": javob12,"oxshash12":oxshash}
         )
@@ -1443,7 +1443,7 @@ async def job_answer13(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[12]['question']} ?--{oxshash}\n\n{javob13}")
 
 
-    if len(javob13) > 15 and oxshash > 40:
+    if len(javob13) > 15 and oxshash > 30:
         await state.update_data(
             {"javob13": javob13,"oxshash13":oxshash}
         )
@@ -1464,7 +1464,7 @@ async def job_answer14(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[13]['question']} ?--{oxshash}\n\n{javob14}")
 
 
-    if len(javob14) > 15 and oxshash > 40:
+    if len(javob14) > 15 and oxshash > 30:
         await state.update_data(
             {"javob14": javob14, "oxshash14": oxshash}
         )
@@ -1486,7 +1486,7 @@ async def job_answer15(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[14]['question']} ?--{oxshash}\n\n{javob15}")
 
 
-    if len(javob15) > 15 and oxshash > 40:
+    if len(javob15) > 15 and oxshash > 30:
         await state.update_data(
             {"javob15": javob15, "oxshash15": oxshash}
         )
@@ -1507,7 +1507,7 @@ async def job_answer16(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[15]['question']} ?--{oxshash}\n\n{javob16}")
 
 
-    if len(javob16) > 15 and oxshash > 40:
+    if len(javob16) > 15 and oxshash > 30:
         await state.update_data(
             {"javob16": javob16, "oxshash16": oxshash}
         )
@@ -1528,7 +1528,7 @@ async def job_answer17(message: types.Message, state: FSMContext):
                                                     f"{jobinterview[16]['question']} ?--{oxshash}\n\n{javob17}")
 
 
-    if len(javob17) > 15 and oxshash > 40:
+    if len(javob17) > 15 and oxshash > 30:
         await state.update_data(
             {"javob17": javob17, "oxshash17": oxshash}
         )
@@ -1550,7 +1550,7 @@ async def job_answer18(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{jobinterview[17]['question']} ?--{oxshash}\n\n{javob18}")
 
-    if len(javob18) > 15 and oxshash > 40:
+    if len(javob18) > 15 and oxshash > 30:
         await state.update_data(
             {"javob18": javob18,"oxshash18":oxshash}
         )
