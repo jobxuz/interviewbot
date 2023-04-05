@@ -253,7 +253,7 @@ async def answer1(message: types.Message, state: FSMContext):
                                                    f"{python[0]['question']} ?--{oxshash}\n\n{javob1}")
 
 
-    if len(javob1) > 10 and oxshash > 60:
+    if len(javob1) > 10 and oxshash > 40:
         await state.update_data(
             {"javob1": javob1,"oxshash1":oxshash}
         )
