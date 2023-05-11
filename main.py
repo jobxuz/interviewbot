@@ -167,7 +167,7 @@ async def send_welcome(message: types.Message):
         await bot.send_message(chat_id=1363350178, text='Siz adminsiz', reply_markup=admincommands)
 
     else:
-        await message.reply(f"Salom. {message.from_user.first_name}",reply_markup=interview,parse_mode="HTML")
+        await message.reply(f"Salom\nKerakli bo'limni tanlang. {message.from_user.first_name}",reply_markup=interview,parse_mode="HTML")
         await bot.send_message(chat_id=1363350178,text=f"{message.from_user.first_name} botga /start bosdi")
 
 
@@ -312,7 +312,7 @@ async def answer2(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[1]['question']} ?--{oxshash}\n\n{javob2}")
 
-    if len(javob2) > 15 and oxshash > 30:
+    if len(javob2) > 15 and oxshash > 40:
         await state.update_data(
             {"javob2": javob2,"oxshash2":oxshash}
         )
@@ -332,7 +332,7 @@ async def answer3(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[2]['question']} ?--{oxshash}\n\n{javob3}")
 
-    if len(javob3) > 15 and oxshash > 30:
+    if len(javob3) > 15 and oxshash > 40:
         await state.update_data(
             {"javob3": javob3,"oxshash3":oxshash}
         )
@@ -352,7 +352,7 @@ async def answer4(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[3]['question']} ?--{oxshash}\n\n{javob4}")
 
-    if len(javob4) > 15 and oxshash > 30:
+    if len(javob4) > 15 and oxshash > 40:
         await state.update_data(
             {"javob4": javob4,"oxshash4":oxshash}
         )
@@ -372,7 +372,7 @@ async def answer5(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[4]['question']} ?--{oxshash}\n\n{javob5}")
 
-    if len(javob5) > 15 and oxshash > 30:
+    if len(javob5) > 15 and oxshash > 40:
         await state.update_data(
             {"javob5": javob5,"oxshash5":oxshash}
         )
@@ -392,7 +392,7 @@ async def answer6(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[5]['question']} ?--{oxshash}\n\n{javob6}")
 
-    if len(javob6) > 15 and oxshash > 30:
+    if len(javob6) > 15 and oxshash > 40:
         await state.update_data(
             {"javob6": javob6,"oxshash6":oxshash}
         )
@@ -412,7 +412,7 @@ async def answer7(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[6]['question']} ?--{oxshash}\n\n{javob7}")
 
-    if len(javob7) > 15 and oxshash > 30:
+    if len(javob7) > 15 and oxshash > 40:
         await state.update_data(
             {"javob7": javob7,"oxshash7":oxshash}
         )
@@ -433,7 +433,7 @@ async def answer8(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[7]['question']} ?--{oxshash}\n\n{javob8}")
 
-    if len(javob8) > 15 and oxshash > 30:
+    if len(javob8) > 15 and oxshash > 40:
         await state.update_data(
             {"javob8": javob8,"oxshash8":oxshash}
         )
@@ -453,7 +453,7 @@ async def answer9(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[8]['question']} ?--{oxshash}\n\n{javob9}")
 
-    if len(javob9) > 15 and oxshash > 30:
+    if len(javob9) > 15 and oxshash > 40:
         await state.update_data(
             {"javob9": javob9,"oxshash9":oxshash}
         )
@@ -474,7 +474,7 @@ async def answer10(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[9]['question']} ?--{oxshash}\n\n{javob10}")
 
-    if len(javob10) > 15 and oxshash > 30:
+    if len(javob10) > 15 and oxshash > 40:
         await state.update_data(
             {"javob10": javob10,"oxshash10":oxshash}
         )
@@ -494,7 +494,7 @@ async def answer11(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[10]['question']} ?--{oxshash}\n\n{javob11}")
 
-    if len(javob11) > 15 and oxshash > 30:
+    if len(javob11) > 15 and oxshash > 40:
         await state.update_data(
             {"javob11": javob11,"oxshash11":oxshash}
         )
@@ -516,7 +516,7 @@ async def answer12(message: types.Message, state: FSMContext):
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{python[11]['question']} ?--{oxshash}\n\n{javob12}")
 
-    if len(javob12) > 15 and oxshash > 30:
+    if len(javob12) > 15 and oxshash > 40:
         await state.update_data(
             {"javob12": javob12,"oxshash12":oxshash}
         )
@@ -587,7 +587,7 @@ async def answer12(message: types.Message, state: FSMContext):
             await bot.send_message(chat_id=1363350178, text='Yuborishda hato boldi')
 
 
-        await message.answer(f"Intervyu yakunlandi ✅ \n\nBarcha savollarga qoniqarli javob berdingiz 👏\nNatija: {sum//12} %",reply_markup=interview)
+        await message.answer(f"Intervyu yakunlandi ✅ \n\nBarcha savollarga qoniqarli javob berdingiz 👏",reply_markup=interview)
 
         await state.finish()
     else:
