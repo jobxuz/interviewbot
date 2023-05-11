@@ -17,4 +17,7 @@ def helpbot():
     return text
 
 
+def bilmadim():
+    list = ["bilmadim","bilmayman","bilmiman"]
 
+    return list

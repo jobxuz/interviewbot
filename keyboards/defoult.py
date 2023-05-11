@@ -30,12 +30,24 @@ admin_interview = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="Job interview"),
+            KeyboardButton(text="DRF"),
 
         ],
         [
             KeyboardButton(text="Python"),
             KeyboardButton(text="Django"),
-            KeyboardButton(text="DRF"),
+            #KeyboardButton(text="DRF"),
+
+        ],
+[
+            KeyboardButton(text="PHP"),
+            KeyboardButton(text="Laravel"),
+        ],
+        [
+            KeyboardButton(text="Java"),
+        ],
+        [
+            KeyboardButton(text="🗯️ Fikr bildirish"),
 
         ],
         [

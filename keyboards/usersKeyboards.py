@@ -17,14 +17,25 @@ interview = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="Python"),
             KeyboardButton(text="Django"),
-            KeyboardButton(text="DRF"),
+            #KeyboardButton(text="DRF"),
 
         ],
         [
+            KeyboardButton(text="DRF"),
             KeyboardButton(text="Job interview"),
-
         ],
-[
+        [
+            KeyboardButton(text="PHP"),
+            KeyboardButton(text="Laravel"),
+        ],
+        [
+            KeyboardButton(text="Java"),
+        ],
+        # [
+        #     KeyboardButton(text="Job interview"),
+        #
+        # ],
+        [
             KeyboardButton(text="🗯️ Fikr bildirish"),
 
         ],

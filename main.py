@@ -3,7 +3,8 @@ import logging
 from date.date import usercreate,userget
 from keyboards.defoult import admincommands,adminusers,admin_interview
 from keyboards.usersKeyboards import BoshMenu,interview,endstate,bekorqilish
-from keyboards.inline import startpython, startdjango, startdrf, startjobinterview, rek
+from keyboards.inline import startpython, startdjango, startdrf, startjobinterview, rek, startphp, startlaravel, \
+    startjava
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters.state import StatesGroup, State
@@ -12,7 +13,7 @@ from aiogram.types import CallbackQuery
 
 
 from date.date import interview_category_name,interview_answer
-from date.fuzz import suniyintelekt,helpbot
+from date.fuzz import suniyintelekt,helpbot,bilmadim
 
 
 from environs import Env
@@ -37,6 +38,9 @@ python = interview_category_name('python')
 django = interview_category_name('django')
 drf = interview_category_name('DRF')
 jobinterview = interview_category_name('jobinterview')
+php = interview_category_name('php')
+laravel = interview_category_name('laravel')
+java = interview_category_name('java')
 
 
 
@@ -106,6 +110,44 @@ class Job(StatesGroup):
     savol17 = State()
     savol18 = State()
     savol19 = State()
+
+
+
+class Php(StatesGroup):
+    savol1 = State()
+    savol2 = State()
+    savol3 = State()
+    savol4 = State()
+    savol5 = State()
+    savol6 = State()
+    savol7 = State()
+    savol8 = State()
+
+
+
+class Laravel(StatesGroup):
+    savol1 = State()
+    savol2 = State()
+    savol3 = State()
+    savol4 = State()
+    savol5 = State()
+
+
+
+
+
+class Java(StatesGroup):
+    savol1 = State()
+    savol2 = State()
+    savol3 = State()
+    savol4 = State()
+    savol5 = State()
+    savol6 = State()
+    savol7 = State()
+    savol8 = State()
+    savol9 = State()
+    savol10 = State()
+
 
 
 class Fikr(StatesGroup):
@@ -218,11 +260,6 @@ async def stateend(message: types.Message, state: FSMContext):
     else:
         await message.answer("Intervyu tugadi ❌", reply_markup=interview)
 
-
-# @dp.message_handler(text="end interview")
-# async def stateendnon(message: types.Message):
-#
-#     await message.answer("Intervyu tugadi ❌", reply_markup=interview)
 
 
 
@@ -1080,7 +1117,7 @@ async def drf_answer9(message: types.Message, state: FSMContext):
 @dp.message_handler(state=DRF.savol10)
 async def drf_answer10(message: types.Message, state: FSMContext):
     javob10 = message.text
-    javoblar = interview_answer(django[9]['question'])
+    javoblar = interview_answer(drf[9]['question'])
     oxshash = suniyintelekt(javob10, javoblar)
     await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
                                                     f"{drf[9]['question']} ?--{oxshash}\n\n{javob10}")
@@ -1649,6 +1686,715 @@ async def job_answer18(message: types.Message, state: FSMContext):
 
 
 
+# php state
+
+@dp.message_handler(text="PHP")
+async def phpinterview(message: types.Message):
+
+    await message.answer("Php interview savollari!\nSavollar soni: 8 ta",reply_markup=startphp)
+
+
+@dp.callback_query_handler(text="php",state=None)
+async def start_question_php(call: CallbackQuery):
+    await call.message.delete()
+    await call.message.answer("Boshladik ✅ Javobni text shakilda yuboring ‼️",reply_markup=endstate)
+    await call.message.answer(f"1-Savol ❗️\n{php[0]['question']} ?")
+    await call.answer(cache_time=60)
+    await Php.savol1.set()
+
+
+
+@dp.message_handler(state=Php.savol1)
+async def php_answer1(message: types.Message, state: FSMContext):
+    javob1 = message.text
+    javoblar = interview_answer(php[0]['question'])
+    oxshash = suniyintelekt(javob1,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[0]['question']} ?--{oxshash}\n\n{javob1}")
+
+
+    if len(javob1) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob1": javob1,"oxshash1":oxshash}
+        )
+
+        await message.answer(f"2-Savol ❗️\n{php[1]['question']} ?")
+
+        await Php.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Php.savol2)
+async def php_answer2(message: types.Message, state: FSMContext):
+    javob2 = message.text
+    javoblar = interview_answer(php[1]['question'])
+    oxshash = suniyintelekt(javob2,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[1]['question']} ?--{oxshash}\n\n{javob2}")
+
+
+    if len(javob2) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob2": javob2,"oxshash2":oxshash}
+        )
+
+        await message.answer(f"3-Savol ❗️\n{php[2]['question']} ?")
+
+        await Php.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Php.savol3)
+async def php_answer3(message: types.Message, state: FSMContext):
+    javob3 = message.text
+    javoblar = interview_answer(php[2]['question'])
+    oxshash = suniyintelekt(javob3,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[2]['question']} ?--{oxshash}\n\n{javob3}")
+
+
+    if len(javob3) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob3": javob3,"oxshash3":oxshash}
+        )
+
+        await message.answer(f"4-Savol ❗️\n{php[3]['question']} ?")
+
+        await Php.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Php.savol4)
+async def php_answer4(message: types.Message, state: FSMContext):
+    javob4 = message.text
+    javoblar = interview_answer(php[3]['question'])
+    oxshash = suniyintelekt(javob4,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[3]['question']} ?--{oxshash}\n\n{javob4}")
+
+
+    if len(javob4) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob4": javob4,"oxshash4":oxshash}
+        )
+
+        await message.answer(f"5-Savol ❗️\n{php[4]['question']} ?")
+
+        await Php.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+@dp.message_handler(state=Php.savol5)
+async def php_answer5(message: types.Message, state: FSMContext):
+    javob5 = message.text
+    javoblar = interview_answer(php[4]['question'])
+    oxshash = suniyintelekt(javob5,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[4]['question']} ?--{oxshash}\n\n{javob5}")
+
+
+    if len(javob5) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob5": javob5,"oxshash5":oxshash}
+        )
+
+        await message.answer(f"6-Savol ❗️\n{php[5]['question']} ?")
+
+        await Php.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Php.savol6)
+async def php_answer6(message: types.Message, state: FSMContext):
+    javob6 = message.text
+    javoblar = interview_answer(php[5]['question'])
+    oxshash = suniyintelekt(javob6,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[5]['question']} ?--{oxshash}\n\n{javob6}")
+
+
+    if len(javob6) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob6": javob6,"oxshash6":oxshash}
+        )
+
+        await message.answer(f"7-Savol ❗️\n{php[6]['question']} ?")
+
+        await Php.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Php.savol7)
+async def php_answer7(message: types.Message, state: FSMContext):
+    javob7 = message.text
+    javoblar = interview_answer(php[6]['question'])
+    oxshash = suniyintelekt(javob7,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[6]['question']} ?--{oxshash}\n\n{javob7}")
+
+
+    if len(javob7) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob7": javob7,"oxshash7":oxshash}
+        )
+
+        await message.answer(f"8-Savol ❗️\n{php[7]['question']} ?")
+
+        await Php.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+
+
+@dp.message_handler(state=Php.savol8)
+async def php_answer10(message: types.Message, state: FSMContext):
+    javob8 = message.text
+    javoblar = interview_answer(php[7]['question'])
+    oxshash = suniyintelekt(javob8, javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{php[7]['question']} ?--{oxshash}\n\n{javob8}")
+
+    if len(javob8) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob8": javob8,"oxshash8":oxshash}
+        )
+
+        # Ma`lumotlarni qayta o'qiymiz
+        data = await state.get_data()
+        javob1 = data.get("javob1")
+        oxshash1 = data.get("oxshash1")
+        javob2 = data.get("javob2")
+        oxshash2 = data.get("oxshash2")
+        javob3 = data.get("javob3")
+        oxshash3 = data.get("oxshash3")
+        javob4 = data.get("javob4")
+        oxshash4 = data.get("oxshash4")
+        javob5 = data.get("javob5")
+        oxshash5 = data.get("oxshash5")
+        javob6 = data.get("javob6")
+        oxshash6 = data.get("oxshash6")
+        javob7 = data.get("javob7")
+        oxshash7 = data.get("oxshash7")
+        javob8 = data.get("javob8")
+        oxshash8 = data.get("oxshash8")
+
+
+
+        sum = oxshash1 + oxshash2 + oxshash3 + oxshash4 + oxshash5 + oxshash6 + oxshash7 + oxshash8
+
+        msg1 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 8}</b>\n\n"
+        msg1 += f"<b> javob1: - {oxshash1}</b>--{javob1}\n\n"
+        msg1 += f"<b> javob2: - {oxshash2}</b>--{javob2}\n\n"
+        msg1 += f"<b> javob3: - {oxshash3}</b>--{javob3}\n\n"
+        msg2 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 8}</b>\n\n"
+        msg2 += f"<b>javob4: - {oxshash4}</b>--{javob4}\n\n"
+        msg2 += f"<b>javob5: - {oxshash5}</b>--{javob5}\n\n"
+        msg2 += f"<b>javob6: - {oxshash6}</b>--{javob6}\n\n"
+        msg3 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 8}</b>\n\n"
+        msg3 += f"<b>javob7: - {oxshash7}</b>--{javob7}\n\n"
+        msg3 += f"<b>javob8: - {oxshash8}</b>--{javob8}\n\n"
+
+
+
+        msg = f"<b>{message.from_user.first_name} ning natijasi: {sum // 8}</b>\n\n"
+        msg += f"{msg1}\n{msg2}\n{msg3}"
+
+        if len(msg) < 4000:
+            await bot.send_message(chat_id=1363350178, text=msg,parse_mode='HTML')
+        elif len(msg) > 4000:
+            try:
+                await bot.send_message(chat_id=1363350178, text=msg1,parse_mode='HTML')
+                await bot.send_message(chat_id=1363350178, text=msg2,parse_mode='HTML')
+                await bot.send_message(chat_id=1363350178, text=msg3,parse_mode='HTML')
+
+            except Exception as e:
+                await bot.send_message(chat_id=1363350178, text=f"Xato: {e}")
+        else:
+            await bot.send_message(chat_id=1363350178, text='Yuborishda hato boldi')
+
+        await message.answer(f"Intervyu yakunlandi ✅ \n\nBarcha savollarga qoniqarli javob berdingiz 👏\nNatija: {sum//8} %", reply_markup=interview)
+
+        await state.finish()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+
+# end php state
+
+
+
+# laravel state
+
+
+@dp.message_handler(text="Laravel")
+async def phpinterview(message: types.Message):
+
+    await message.answer("Laravel interview savollari!\nSavollar soni: 5 ta",reply_markup=startlaravel)
+
+
+@dp.callback_query_handler(text="laravel",state=None)
+async def start_question_laravel(call: CallbackQuery):
+    await call.message.delete()
+    await call.message.answer("Boshladik ✅ Javobni text shakilda yuboring ‼️",reply_markup=endstate)
+    await call.message.answer(f"1-Savol ❗️\n{laravel[0]['question']} ?")
+    await call.answer(cache_time=60)
+    await Laravel.savol1.set()
+
+
+
+@dp.message_handler(state=Laravel.savol1)
+async def laravel_answer1(message: types.Message, state: FSMContext):
+    javob1 = message.text
+    javoblar = interview_answer(laravel[0]['question'])
+    oxshash = suniyintelekt(javob1,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{laravel[0]['question']} ?--{oxshash}\n\n{javob1}")
+
+
+    if len(javob1) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob1": javob1,"oxshash1":oxshash}
+        )
+
+        await message.answer(f"2-Savol ❗️\n{laravel[1]['question']} ?")
+
+        await Laravel.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Laravel.savol2)
+async def laravel_answer2(message: types.Message, state: FSMContext):
+    javob2 = message.text
+    javoblar = interview_answer(laravel[1]['question'])
+    oxshash = suniyintelekt(javob2,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{laravel[1]['question']} ?--{oxshash}\n\n{javob2}")
+
+
+    if len(javob2) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob2": javob2,"oxshash2":oxshash}
+        )
+
+        await message.answer(f"3-Savol ❗️\n{laravel[2]['question']} ?")
+
+        await Laravel.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Laravel.savol3)
+async def laravel_answer3(message: types.Message, state: FSMContext):
+    javob3 = message.text
+    javoblar = interview_answer(laravel[2]['question'])
+    oxshash = suniyintelekt(javob3,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{laravel[2]['question']} ?--{oxshash}\n\n{javob3}")
+
+
+    if len(javob3) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob3": javob3,"oxshash3":oxshash}
+        )
+
+        await message.answer(f"4-Savol ❗️\n{laravel[3]['question']} ?")
+
+        await Laravel.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Laravel.savol4)
+async def laravel_answer4(message: types.Message, state: FSMContext):
+    javob4 = message.text
+    javoblar = interview_answer(laravel[3]['question'])
+    oxshash = suniyintelekt(javob4,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{laravel[3]['question']} ?--{oxshash}\n\n{javob4}")
+
+
+    if len(javob4) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob4": javob4,"oxshash4":oxshash}
+        )
+
+        await message.answer(f"5-Savol ❗️\n{laravel[4]['question']} ?")
+
+        await Laravel.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Laravel.savol5)
+async def laravel_answer5(message: types.Message, state: FSMContext):
+    javob5 = message.text
+    javoblar = interview_answer(laravel[7]['question'])
+    oxshash = suniyintelekt(javob5, javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{laravel[7]['question']} ?--{oxshash}\n\n{javob5}")
+
+    if len(javob5) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob5": javob5,"oxshash5":oxshash}
+        )
+
+        # Ma`lumotlarni qayta o'qiymiz
+        data = await state.get_data()
+        javob1 = data.get("javob1")
+        oxshash1 = data.get("oxshash1")
+        javob2 = data.get("javob2")
+        oxshash2 = data.get("oxshash2")
+        javob3 = data.get("javob3")
+        oxshash3 = data.get("oxshash3")
+        javob4 = data.get("javob4")
+        oxshash4 = data.get("oxshash4")
+        javob5 = data.get("javob5")
+        oxshash5 = data.get("oxshash5")
+
+
+
+
+        sum = oxshash1 + oxshash2 + oxshash3 + oxshash4 + oxshash5
+
+        msg1 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 5}</b>\n\n"
+        msg1 += f"<b> javob1: - {oxshash1}</b>--{javob1}\n\n"
+        msg1 += f"<b> javob2: - {oxshash2}</b>--{javob2}\n\n"
+        msg1 += f"<b> javob3: - {oxshash3}</b>--{javob3}\n\n"
+        msg2 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 5}</b>\n\n"
+        msg2 += f"<b>javob4: - {oxshash4}</b>--{javob4}\n\n"
+        msg2 += f"<b>javob5: - {oxshash5}</b>--{javob5}\n\n"
+
+
+
+
+        msg = f"<b>{message.from_user.first_name} ning natijasi: {sum // 5}</b>\n\n"
+        msg += f"{msg1}\n{msg2}"
+
+        if len(msg) < 4000:
+            await bot.send_message(chat_id=1363350178, text=msg,parse_mode='HTML')
+        elif len(msg) > 4000:
+            try:
+                await bot.send_message(chat_id=1363350178, text=msg1,parse_mode='HTML')
+                await bot.send_message(chat_id=1363350178, text=msg2,parse_mode='HTML')
+
+
+            except Exception as e:
+                await bot.send_message(chat_id=1363350178, text=f"Xato: {e}")
+        else:
+            await bot.send_message(chat_id=1363350178, text='Yuborishda hato boldi')
+
+        await message.answer(f"Intervyu yakunlandi ✅ \n\nBarcha savollarga qoniqarli javob berdingiz 👏\nNatija: {sum//8} %", reply_markup=interview)
+
+        await state.finish()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+
+
+
+# end laravel state
+
+
+# java state
+
+
+
+@dp.message_handler(text="Java")
+async def javainterview(message: types.Message):
+
+    await message.answer("Java interview savollari!\nSavollar soni: 10 ta",reply_markup=startjava)
+
+
+@dp.callback_query_handler(text="java",state=None)
+async def start_question_java(call: CallbackQuery):
+    await call.message.delete()
+    await call.message.answer("Boshladik ✅ Javobni text shakilda yuboring ‼️",reply_markup=endstate)
+    await call.message.answer(f"1-Savol ❗️\n{java[0]['question']} ?")
+    await call.answer(cache_time=60)
+    await Java.savol1.set()
+
+
+
+@dp.message_handler(state=Java.savol1)
+async def java_answer1(message: types.Message, state: FSMContext):
+    javob1 = message.text
+    javoblar = interview_answer(java[0]['question'])
+    oxshash = suniyintelekt(javob1,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[0]['question']} ?--{oxshash}\n\n{javob1}")
+
+
+    if len(javob1) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob1": javob1,"oxshash1":oxshash}
+        )
+
+        await message.answer(f"2-Savol ❗️\n{java[1]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Java.savol2)
+async def java_answer2(message: types.Message, state: FSMContext):
+    javob2 = message.text
+    javoblar = interview_answer(java[1]['question'])
+    oxshash = suniyintelekt(javob2,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[1]['question']} ?--{oxshash}\n\n{javob2}")
+
+
+    if len(javob2) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob2": javob2,"oxshash2":oxshash}
+        )
+
+        await message.answer(f"3-Savol ❗️\n{java[2]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Java.savol3)
+async def java_answer3(message: types.Message, state: FSMContext):
+    javob3 = message.text
+    javoblar = interview_answer(java[2]['question'])
+    oxshash = suniyintelekt(javob3,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[2]['question']} ?--{oxshash}\n\n{javob3}")
+
+
+    if len(javob3) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob3": javob3,"oxshash3":oxshash}
+        )
+
+        await message.answer(f"4-Savol ❗️\n{java[3]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+
+@dp.message_handler(state=Java.savol4)
+async def java_answer4(message: types.Message, state: FSMContext):
+    javob4 = message.text
+    javoblar = interview_answer(java[3]['question'])
+    oxshash = suniyintelekt(javob4,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[3]['question']} ?--{oxshash}\n\n{javob4}")
+
+
+    if len(javob4) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob4": javob4,"oxshash4":oxshash}
+        )
+
+        await message.answer(f"5-Savol ❗️\n{java[4]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+@dp.message_handler(state=Java.savol5)
+async def java_answer5(message: types.Message, state: FSMContext):
+    javob5 = message.text
+    javoblar = interview_answer(java[4]['question'])
+    oxshash = suniyintelekt(javob5,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[4]['question']} ?--{oxshash}\n\n{javob5}")
+
+
+    if len(javob5) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob5": javob5,"oxshash5":oxshash}
+        )
+
+        await message.answer(f"6-Savol ❗️\n{java[5]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Java.savol6)
+async def java_answer6(message: types.Message, state: FSMContext):
+    javob6 = message.text
+    javoblar = interview_answer(java[5]['question'])
+    oxshash = suniyintelekt(javob6,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[5]['question']} ?--{oxshash}\n\n{javob6}")
+
+
+    if len(javob6) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob6": javob6,"oxshash6":oxshash}
+        )
+
+        await message.answer(f"7-Savol ❗️\n{java[6]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Java.savol7)
+async def java_answer7(message: types.Message, state: FSMContext):
+    javob7 = message.text
+    javoblar = interview_answer(java[6]['question'])
+    oxshash = suniyintelekt(javob7,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[6]['question']} ?--{oxshash}\n\n{javob7}")
+
+
+    if len(javob7) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob7": javob7,"oxshash7":oxshash}
+        )
+
+        await message.answer(f"8-Savol ❗️\n{java[7]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Java.savol8)
+async def java_answer8(message: types.Message, state: FSMContext):
+    javob8 = message.text
+    javoblar = interview_answer(java[7]['question'])
+    oxshash = suniyintelekt(javob8,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[7]['question']} ?--{oxshash}\n\n{javob8}")
+
+
+    if len(javob8) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob8": javob8,"oxshash8":oxshash}
+        )
+
+        await message.answer(f"9-Savol ❗️\n{java[8]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Java.savol9)
+async def java_answer9(message: types.Message, state: FSMContext):
+    javob9 = message.text
+    javoblar = interview_answer(java[8]['question'])
+    oxshash = suniyintelekt(javob9,javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[8]['question']} ?--{oxshash}\n\n{javob9}")
+
+
+    if len(javob9) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob9": javob9,"oxshash9":oxshash}
+        )
+
+        await message.answer(f"10-Savol ❗️\n{java[9]['question']} ?")
+
+        await Java.next()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+@dp.message_handler(state=Java.savol10)
+async def java_answer10(message: types.Message, state: FSMContext):
+    javob10 = message.text
+    javoblar = interview_answer(java[9]['question'])
+    oxshash = suniyintelekt(javob10, javoblar)
+    await bot.send_message(chat_id=1363350178, text=f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+                                                    f"{java[9]['question']} ?--{oxshash}\n\n{javob10}")
+
+    if len(javob10) > 15 and oxshash > 30:
+        await state.update_data(
+            {"javob10": javob10,"oxshash10":oxshash}
+        )
+
+        # Ma`lumotlarni qayta o'qiymiz
+        data = await state.get_data()
+        javob1 = data.get("javob1")
+        oxshash1 = data.get("oxshash1")
+        javob2 = data.get("javob2")
+        oxshash2 = data.get("oxshash2")
+        javob3 = data.get("javob3")
+        oxshash3 = data.get("oxshash3")
+        javob4 = data.get("javob4")
+        oxshash4 = data.get("oxshash4")
+        javob5 = data.get("javob5")
+        oxshash5 = data.get("oxshash5")
+        javob6 = data.get("javob6")
+        oxshash6 = data.get("oxshash6")
+        javob7 = data.get("javob7")
+        oxshash7 = data.get("oxshash7")
+        javob8 = data.get("javob8")
+        oxshash8 = data.get("oxshash8")
+        javob9 = data.get("javob9")
+        oxshash9 = data.get("oxshash9")
+        javob10 = data.get("javob10")
+        oxshash10 = data.get("oxshash10")
+
+
+        sum = oxshash1 + oxshash2 + oxshash3 + oxshash4 + oxshash5 + oxshash6 + oxshash7 + oxshash8 + oxshash9 + oxshash10
+
+        msg1 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 10}</b>\n\n"
+        msg1 += f"<b> javob1: - {oxshash1}</b>--{javob1}\n\n"
+        msg1 += f"<b> javob2: - {oxshash2}</b>--{javob2}\n\n"
+        msg1 += f"<b> javob3: - {oxshash3}</b>--{javob3}\n\n"
+        msg2 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 10}</b>\n\n"
+        msg2 += f"<b>javob4: - {oxshash4}</b>--{javob4}\n\n"
+        msg2 += f"<b>javob5: - {oxshash5}</b>--{javob5}\n\n"
+        msg2 += f"<b>javob6: - {oxshash6}</b>--{javob6}\n\n"
+        msg3 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 10}</b>\n\n"
+        msg3 += f"<b>javob7: - {oxshash7}</b>--{javob7}\n\n"
+        msg3 += f"<b>javob8: - {oxshash8}</b>--{javob8}\n\n"
+        msg3 += f"<b>javob9: - {oxshash9}</b>--{javob9}\n\n"
+        msg4 = f"<b>{message.from_user.first_name} ning natijasi: {sum // 10}</b>\n\n"
+        msg4 += f"<b>javob10: - {oxshash10}</b>--{javob10}\n\n"
+
+
+        msg = f"<b>{message.from_user.first_name} ning natijasi: {sum // 10}</b>\n\n"
+        msg += f"{msg1}\n{msg2}\n{msg3}\n{msg4}"
+
+        if len(msg) < 4000:
+            await bot.send_message(chat_id=1363350178, text=msg,parse_mode='HTML')
+        elif len(msg) > 4000:
+            try:
+                await bot.send_message(chat_id=1363350178, text=msg1,parse_mode='HTML')
+                await bot.send_message(chat_id=1363350178, text=msg2,parse_mode='HTML')
+                await bot.send_message(chat_id=1363350178, text=msg3,parse_mode='HTML')
+                await bot.send_message(chat_id=1363350178, text=msg4,parse_mode='HTML')
+            except Exception as e:
+                await bot.send_message(chat_id=1363350178, text=f"Xato: {e}")
+        else:
+            await bot.send_message(chat_id=1363350178, text='Yuborishda hato boldi')
+
+        await message.answer(f"Intervyu yakunlandi ✅ \n\nBarcha savollarga qoniqarli javob berdingiz 👏\nNatija: {sum//10} %", reply_markup=interview)
+
+        await state.finish()
+    else:
+        await message.answer("To'liqroq javob berishga harakat qiling!")
+
+
+
+# end java state
+
+
 
 # End interview commands
 
@@ -1740,6 +2486,14 @@ async def send_ad_to_all(message: types.Message,state: FSMContext):
 
 
 # End admin commands
+
+
+# @dp.message_handler(text=bilmadim(),state='*')
+# async def bilmaslargajavob(message: types.Message):
+#
+#     await message.answer(f"< {message.text} > Bu javob qabul qilinmaydi!" )
+
+
 
 # @dp.message_handler()
 # async def echo(message: types.Message):

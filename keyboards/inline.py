@@ -26,6 +26,37 @@ startdrf = InlineKeyboardMarkup(
     ]
 )
 
+
+startphp = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text='♻ start php interview',callback_data='php'),
+        ],
+    ]
+)
+
+
+
+startlaravel = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text='♻ start laravel interview',callback_data='laravel'),
+        ],
+    ]
+)
+
+
+startjava = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton(text='♻ start java interview',callback_data='java'),
+        ],
+    ]
+)
+
+
+
+
 startjobinterview = InlineKeyboardMarkup(
     inline_keyboard=[
         [
