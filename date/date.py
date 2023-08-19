@@ -10,7 +10,6 @@ def userget():
 
 
 
-
 def usercreate(first_name,username,user_id):
     url = 'https://temur01.pythonanywhere.com/api/telegramuser/'
     #url = 'http://127.0.0.1:8000/api/telegramuser/'

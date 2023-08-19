@@ -154,6 +154,9 @@ class Fikr(StatesGroup):
     habar = State()
 
 
+class Javob_qaytarish(StatesGroup):
+    id = State()
+    javob = State()
 
 
 @dp.message_handler(commands=['start'])
@@ -215,14 +218,51 @@ async def fikrqoldirish(message: types.Message):
 
 
 @dp.message_handler(state=Fikr.habar)
-async def answer1(message: types.Message, state: FSMContext):
-    msg = f"{message.from_user.first_name}--@{message.from_user.username}\n\n"
+async def message_user(message: types.Message, state: FSMContext):
+    msg = f"{message.from_user.first_name}--@{message.from_user.username}--{message.from_user.id}\n\n"
     msg += f"Habar: -> {message.text}"
     await bot.send_message(chat_id=1363350178,text=msg)
     await state.finish()
     await message.answer("✔️Muvaffaqiyatli yuborildi!",reply_markup=interview)
 
 
+
+@dp.message_handler(text="Javob")
+async def Javob_berish(message: types.Message):
+    await message.answer("javob yozish uchun chat_id kiriting:")
+    await Javob_qaytarish.id.set()
+
+
+@dp.message_handler(state=Javob_qaytarish.id)
+async def answer_admin_id(message: types.Message, state: FSMContext):
+    id = message.text
+    await state.update_data(
+        {"chat_id": id}
+    )
+    await message.answer("javob yozish uchun text kiriting:")
+    await Javob_qaytarish.next()
+
+
+@dp.message_handler(state=Javob_qaytarish.javob)
+async def answer_admin_text(message: types.Message, state: FSMContext):
+    text = message.text
+    await state.update_data(
+        {"text": text}
+    )
+
+    data = await state.get_data()
+    user_id = data.get("chat_id")
+    admin_text = data.get("text")
+
+
+    try:
+        await bot.send_message(chat_id=user_id,text=admin_text)
+
+        await state.finish()
+        await bot.send_message(chat_id=1363350178, text="✔️Muvaffaqiyatli yuborildi!")
+    except Exception as e:
+        await bot.send_message(chat_id=1363350178,text=f"Hato: {e}")
+        await state.finish()
 
 
 @dp.message_handler(text="interviews",chat_id=1363350178)
@@ -2418,8 +2458,9 @@ async def adminpanel(message: types.Message):
 
 @dp.message_handler(chat_id=1363350178, text='users')
 async def users(message: types.Message):
-    datauser = userget()
-    text = f"Interview Questions || Foydalanuvchilar soni: {len(datauser)}\n\n"
+    countuser = userget()
+    datauser = userget()[-45:]
+    text = f"Interview Questions || Foydalanuvchilar soni: {len(countuser)}\n\n"
     for user in datauser:
         text += f"{user['id']}). || {user['first_name']} || @{user['username']} || {user['language']}\n"
     await message.answer(text)
@@ -2434,7 +2475,7 @@ async def back_button(message: types.Message):
 
 
 @dp.message_handler(text="reklama",user_id=ADMINS)
-async def bot_start(message: types.Message, state: FSMContext):
+async def bot_reklama(message: types.Message, state: FSMContext):
     await message.answer("reklama yuboring")
     await state.set_state("reklama")
 
@@ -2467,6 +2508,8 @@ async def send_ad_to_all(message: types.Message,state: FSMContext):
             await call.message.delete()
     except Exception as e:
         print(e)
+
+
 
 
 
