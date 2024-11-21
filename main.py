@@ -2474,42 +2474,42 @@ async def back_button(message: types.Message):
 
 
 
+
+from aiogram.types import ContentType
+
+
+class Reklama(StatesGroup):
+    message = State()
+
+
+
 @dp.message_handler(text="reklama",user_id=ADMINS)
-async def bot_reklama(message: types.Message, state: FSMContext):
+async def bot_start(message: types.Message):
     await message.answer("reklama yuboring")
-    await state.set_state("reklama")
+    await Reklama.message.set()
 
 
+@dp.message_handler(content_types=ContentType.ANY,state=Reklama.message)
+async def answer_fullname(message: types.Message, state: FSMContext):
+    habar = message.text
 
-@dp.message_handler(state='reklama')
-async def send_ad_to_all(message: types.Message,state: FSMContext):
-    try:
-        await bot.send_message(chat_id=ADMINS[0],text=f"Habar to'g'rimi ‼️\n{message.text}",reply_markup=rek)
+    await state.update_data(
+        {"habar": habar}
+    )
+    data = await state.get_data()
+    reklama = data.get("habar")
+
+    msg = reklama
+    
+    for user in userget():
+        user_id = user['user_id']
         try:
-            @dp.callback_query_handler(text="ha",state='reklama')
-            async def rek_ha(call: CallbackQuery):
-                users = userget()
-                for user in users:
-                    user_id = user['user_id']
-                    try:
-                        await bot.send_message(chat_id=user_id, text=f"{message.text}")
-                    except Exception as e:
-                        print(e)
-                    await asyncio.sleep(0.05)
-                await bot.send_message(chat_id=ADMINS[0],text=f"Reklama yuborildi! ✅")
-                await state.finish()
-                await call.message.delete()
+            await message.send_copy(chat_id=user_id)
+            await asyncio.sleep(0.05)
         except Exception as e:
-            print(e)
-        @dp.callback_query_handler(text="yuq",state='reklama')
-        async def rek_yuq(call: CallbackQuery):
-            await bot.send_message(chat_id=ADMINS[0],text="Reklama yuborilmadi! ❌")
-            await state.finish()
-            await call.message.delete()
-    except Exception as e:
-        print(e)
-
-
+            await bot.send_message(chat_id=ADMINS[0],text=f"{e}")
+    await bot.send_message(chat_id=ADMINS[0],text=f"Reklama yuborildi! ✅")
+    await state.finish()
 
 
 
